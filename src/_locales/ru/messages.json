@@ -1,0 +1,116 @@
+{
+  "extName": {
+    "message": "Access Helper: легальные альтернативы и архив"
+  },
+  "extDesc": {
+    "message": "Показывает официальные альтернативные домены из ваших настроек и ссылки на архив при ошибке загрузки, плюс подсказки на страницах поиска."
+  },
+  "optTitle": {
+    "message": "Access Helper — настройки"
+  },
+  "domainLabel": {
+    "message": "Домен"
+  },
+  "altsLabel": {
+    "message": "Официальные альтернативы (домен или полный URL, через запятую)"
+  },
+  "addBtn": {
+    "message": "Добавить"
+  },
+  "exportBtn": {
+    "message": "Экспорт JSON"
+  },
+  "importBtn": {
+    "message": "Импорт JSON"
+  },
+  "jsonFormatHelp": {
+    "message": "JSON формат: {\"example.com\":[\"example.org\",\"https://ya.ru/internet\"]}"
+  },
+  "listEmpty": {
+    "message": "Список пуст."
+  },
+  "deleteBtn": {
+    "message": "Удалить"
+  },
+  "suggestTitle": {
+    "message": "Страница не открылась — подсказки"
+  },
+  "quickActions": {
+    "message": "Быстрые действия"
+  },
+  "altsHeading": {
+    "message": "Официальные альтернативные домены (из настроек)"
+  },
+  "altsEmpty": {
+    "message": "В настройках пока нет альтернатив для этого домена."
+  },
+  "archiveHeading": {
+    "message": "Архив и проверка"
+  },
+  "waybackBtn": {
+    "message": "Архивная копия (Wayback)"
+  },
+  "siteSearchBtn": {
+    "message": "Поиск по домену"
+  },
+  "footerNote": {
+    "message": "Используйте только официальные альтернативные домены и учитывайте местные законы. Расширение не обходит блокировки."
+  },
+  "labelURL": {
+    "message": "Адрес"
+  },
+  "labelError": {
+    "message": "Ошибка"
+  },
+  "labelUnknown": {
+    "message": "неизвестно"
+  },
+  "labelRetry": {
+    "message": "Повторить"
+  },
+  "labelTry": {
+    "message": "Попробовать"
+  },
+  "serpPanelTitle": {
+    "message": "Подсказки по поиску"
+  },
+  "serpHide": {
+    "message": "Скрыть"
+  },
+  "serpTipCheck": {
+    "message": "Проверьте написание, попробуйте более точную фразу или используйте кавычки для точного совпадения."
+  },
+  "serpTipRestrict": {
+    "message": "Попробуйте ограничить поиск доменом:"
+  },
+  "serpTipAlternates": {
+    "message": "Официальные альтернативные домены из ваших настроек:"
+  },
+  "serpTipArchive": {
+    "message": "Посмотреть архивные копии:"
+  },
+  "serpTipYandex": {
+    "message": "То же в Яндексе:"
+  },
+  "settingsBtn": {
+    "message": "Настройки"
+  },
+  "searchLabel": {
+    "message": "Поиск по доменам"
+  },
+  "searchPlaceholder": {
+    "message": "Начните ввод для фильтра..."
+  },
+  "bookmarksHeading": {
+    "message": "Похожие закладки"
+  },
+  "appName": {
+    "message": "Unlock.SBS — Smart Bypass Service"
+  },
+  "appDesc": {
+    "message": "Подсказки по поиску, официальные зеркала и ваши закладки прямо на странице выдачи. Помогает, когда сайты заблокированы."
+  },
+  "settingsTitle": {
+    "message": "Unlock.SBS — настройки"
+  }
+}

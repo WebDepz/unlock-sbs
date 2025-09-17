@@ -1,0 +1,131 @@
+{
+  "extName": {
+    "message": "Access Helper: Legal Alternates & Archive"
+  },
+  "extDesc": {
+    "message": "Shows official alternate domains you add and archive links when a site fails to load, plus search-page tips."
+  },
+  "optTitle": {
+    "message": "Access Helper — Settings"
+  },
+  "domainLabel": {
+    "message": "Domain"
+  },
+  "altsLabel": {
+    "message": "Official alternates (comma-separated)"
+  },
+  "addBtn": {
+    "message": "Add"
+  },
+  "exportBtn": {
+    "message": "Export JSON"
+  },
+  "importBtn": {
+    "message": "Import JSON"
+  },
+  "jsonFormatHelp": {
+    "message": "JSON format: {\"example.com\":[\"example.org\",\"example.net\"]}"
+  },
+  "listEmpty": {
+    "message": "List is empty."
+  },
+  "deleteBtn": {
+    "message": "Delete"
+  },
+  "suggestTitle": {
+    "message": "Site didn’t load — suggestions"
+  },
+  "quickActions": {
+    "message": "Quick actions"
+  },
+  "altsHeading": {
+    "message": "Official alternate domains (from your settings)"
+  },
+  "altsEmpty": {
+    "message": "No alternates for this domain in your settings yet."
+  },
+  "archiveHeading": {
+    "message": "Archive & checks"
+  },
+  "waybackBtn": {
+    "message": "Archive copy (Wayback)"
+  },
+  "siteSearchBtn": {
+    "message": "Site search"
+  },
+  "footerNote": {
+    "message": "Use only official alternates and follow local laws. The extension does not circumvent restrictions."
+  },
+  "labelURL": {
+    "message": "URL"
+  },
+  "labelError": {
+    "message": "Error"
+  },
+  "labelUnknown": {
+    "message": "unknown"
+  },
+  "labelRetry": {
+    "message": "Retry"
+  },
+  "labelTry": {
+    "message": "Try"
+  },
+  "serpPanelTitle": {
+    "message": "Search tips"
+  },
+  "serpHide": {
+    "message": "Hide"
+  },
+  "serpTipCheck": {
+    "message": "Check spelling, try a more precise phrase, or use quotes for exact match."
+  },
+  "serpTipRestrict": {
+    "message": "Try restricting the search to domain:"
+  },
+  "serpTipAlternates": {
+    "message": "Official alternates from your settings:"
+  },
+  "serpTipArchive": {
+    "message": "See archived copies:"
+  },
+  "serpTipYandex": {
+    "message": "Same in Yandex:"
+  },
+  "settingsBtn": {
+    "message": "Settings"
+  },
+  "searchLabel": {
+    "message": "Filter domains"
+  },
+  "searchPlaceholder": {
+    "message": "Type to filter..."
+  },
+  "bookmarksHeading": {
+    "message": "Related bookmarks"
+  },
+  "prefsHeading": {
+    "message": "Advanced settings"
+  },
+  "appDesc": {
+    "message": "Shows official mirrors and your related bookmarks right on search pages. Helps when websites are blocked."
+  },
+  "prefShowBadge": {
+    "message": "Badge with bookmarks count"
+  },
+  "appName": {
+    "message": "Unlock.SBS — Smart Bypass Service"
+  },
+  "prefUnicode": {
+    "message": "Unicode tokenization (if available)"
+  },
+  "prefSensitivity": {
+    "message": "Sensitivity (min brand length)"
+  },
+  "prefShowBookmarks": {
+    "message": "Show bookmarks on SERP"
+  },
+  "settingsTitle": {
+    "message": "Unlock.SBS — settings"
+  }
+}

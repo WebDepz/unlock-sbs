@@ -1,0 +1,1 @@
+- i18n, icons, side panel + fallback, permissions reviewed.

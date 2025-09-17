@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title data-i18n="optTitle">Access Helper — Settings</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <style>
+  :root {
+    --bg: #0b1220;
+    --card: #121a2b;
+    --border: #223052;
+    --text: #e7ecf3;
+    --muted: #9aa6bb;
+    --input-bg:#0f1627;
+    --input-border:#2b3a5f;
+    --btn-bg:#1a2440;
+    --btn-border:#2b3a5f;
+    --accent: #4c8dff;
+    --link: #a8c6ff;
+  }
+  @media (prefers-color-scheme: light) {
+    :root {
+      --bg: #ffffff;
+      --card: #ffffff;
+      --border: #dfe3ea;
+      --text: #1f2328;
+      --muted: #5e6a7a;
+      --input-bg:#ffffff;
+      --input-border:#cbd5e1;
+      --btn-bg:#f7f9fb;
+      --btn-border:#cbd5e1;
+      --accent:#1b66ff;
+      --link:#1b66ff;
+    }
+  }
+  body { margin:0; background:var(--bg); color:var(--text); font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Arial, sans-serif; }
+  .wrap { max-width: 960px; margin: 24px auto; padding: 0 16px; }
+  h1 { font-size: 22px; margin: 0 0 14px; }
+  .card { background:var(--card); border:1px solid var(--border); border-radius:16px; padding: 18px; }
+  label { display:block; margin: 6px 0 6px; color:var(--muted); font-size:13px; }
+  input { width: 100%; padding: 10px 12px; border-radius: 10px; border:1px solid var(--input-border); background:var(--input-bg); color:var(--text); }
+  button { padding: 10px 14px; border-radius: 10px; border:1px solid var(--btn-border); background:var(--btn-bg); color:var(--text); cursor:pointer; }
+  
+  .row { display:flex; gap:10px; flex-wrap:wrap; align-items:center; margin-top:12px; }
+  .muted { color:var(--muted); font-size:12px; }
+  .list { margin-top: 16px; border-top:1px solid var(--border); }
+  .item { display:grid; grid-template-columns: minmax(180px,240px) 1fr auto; gap:12px; align-items:center; padding:10px 0; border-bottom:1px solid var(--border); }
+  .domain { font-weight:600; }
+  .alts { color:var(--text); display:flex; flex-wrap:wrap; gap:8px; }
+  .btn { background:var(--btn-bg); border:1px solid var(--btn-border); }
+  a.pill { display:inline-flex; align-items:center; gap:8px; padding:8px 10px; border-radius:999px; border:1px solid var(--btn-border); background: var(--btn-bg); color: var(--link); text-decoration:none; cursor:pointer; transition: transform .08s ease, background .12s ease; }
+  a.pill:hover { transform: translateY(-1px); }
+  .arrow { opacity:.9 }
+  @media (max-width: 640px) {
+    .grid, .item { grid-template-columns: 1fr; }
+    .item > :last-child { justify-self: start; }
+  }
+  
+  .grid2 { display:grid; grid-template-columns: minmax(220px, 280px) 1fr; gap: 14px 16px; align-items: end; }
+  .combo { display:flex; gap:8px; align-items: center; }
+  .combo input { flex: 1 1 auto; }
+  .combo button { white-space: nowrap; }
+  @media (max-width: 720px) { .grid2 { grid-template-columns: 1fr; } }
+
+  .section { margin-bottom: 16px; }
+  .list { margin-top: 8px; border-top:1px solid var(--border); }
+  @media (max-width: 720px) { .wrap { padding: 0 12px; } .card { padding: 14px; } }
+
+  .combo { display:flex; gap:8px; align-items: center; }
+  .combo input { flex: 1 1 auto; width: auto !important; min-width: 0; }
+  .combo button { white-space: nowrap; }
+  .searchRow { margin-top: 10px; }
+input{width:auto;}
+</style>
+<style>
+.prefs-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px;align-items:center}
+.prefs-grid .range{display:flex;align-items:center;gap:8px}
+.prefs-grid label.checkbox{display:flex;align-items:center;gap:8px;white-space:nowrap}
+@media(max-width:600px){.prefs-grid{grid-template-columns:1fr}}
+input{width:auto;}
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <h1><span data-i18n="optTitle">Access Helper — Settings</span></h1>
+    <div class="card">
+      <div class="section grid2">
+        <div>
+          <label data-i18n="domainLabel">Domain</label>
+          <input id="domain" placeholder="example.com" />
+        </div>
+        <div>
+          <label data-i18n="altsLabel">Official alternates (comma-separated)</label>
+          <div class="combo">
+            <input id="alts" placeholder="example.org, example.net" />
+            <button id="add"><span data-i18n="addBtn">Add</span></button>
+          </div>
+        </div>
+      </div>
+
+      <div class="section row">
+        <button id="exportBtn"><span data-i18n="exportBtn">Export JSON</span></button>
+        <button id="importBtn"><span data-i18n="importBtn">Import JSON</span></button>
+        <span class="muted" data-i18n="jsonFormatHelp">JSON format...</span>
+      </div>
+
+      <div class="section" id="prefs" style="margin-top:18px;">
+  <h2 style="font-size:16px; margin:0 0 8px;">Доп. настройки</h2>
+  <div class="prefs-grid">
+    <label class="range">Чувствительность (мин. длина бренда):
+      <input id="prefMinToken" type="range" min="2" max="6" value="2"/>
+      <span id="prefMinTokenVal" style="min-width:20px;text-align:center">2</span>
+    </label>
+    <label class="checkbox"><input id="prefUnicode" type="checkbox" checked> Unicode‑токенизация (если доступна)</label>
+    <label class="checkbox"><input id="prefShowBookmarks" type="checkbox" checked> Показывать закладки на SERP</label>
+    <label class="checkbox"><input id="prefShowBadge" type="checkbox" checked> Значок с количеством закладок</label>
+  </div>
+</div>
+
+<div class="searchRow"><label data-i18n="searchLabel">Filter domains</label><input id="search" placeholder="..." data-i18n-placeholder="searchPlaceholder" /></div><div class="list" id="list"></div>
+<div class="section" id="bmSection" style="margin-top:12px; display:none;"><div class="muted" data-i18n="bookmarksHeading">Related bookmarks</div><div id="bmResults" class="alts" style="display:flex;flex-wrap:wrap;gap:8px;margin-top:6px;"></div></div>
+    </div>
+  </div>
+  <script src="options_i18n.js"></script>
+  <script src="options.js"></script>
+</body>
+</html>

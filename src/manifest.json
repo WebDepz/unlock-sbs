@@ -1,0 +1,52 @@
+{
+  "manifest_version": 3,
+  "name": "__MSG_appName__",
+  "description": "__MSG_appDesc__",
+  "version": "0.5.7",
+  "default_locale": "en",
+  "permissions": [
+    "bookmarks",
+    "scripting",
+    "storage",
+    "tabs",
+    "webNavigation"
+  ],
+  "host_permissions": [
+    "*://*/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "options_page": "options.html",
+  "action": {
+    "default_title": "__MSG_appName__",
+    "default_icon": {
+      "16": "icons/unlock_16.png",
+      "32": "icons/unlock_32.png",
+      "48": "icons/unlock_48.png",
+      "64": "icons/unlock_64.png",
+      "128": "icons/unlock_128.png",
+      "256": "icons/unlock_256.png"
+    }
+  },
+  "icons": {
+    "48": "icons/unlock_48.png",
+    "64": "icons/unlock_64.png",
+    "128": "icons/unlock_128.png",
+    "256": "icons/unlock_256.png"
+  },
+  "side_panel": {
+    "default_path": "suggest.html"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*/*"
+      ],
+      "js": [
+        "serp_helper.js"
+      ],
+      "run_at": "document_end"
+    }
+  ]
+}

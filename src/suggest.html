@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title data-i18n="suggestTitle">Site didn’t load — suggestions</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <style>
+    :root {
+      --bg: #0b1220;
+      --card: #121a2b;
+      --border: #223052;
+      --text: #e7ecf3;
+      --muted: #a9b4c7;
+      --accent: #4c8dff;
+      --accent-quiet: #273451;
+      --btn-bg: #1a2440;
+      --btn-border: #2b3a5f;
+      --link: #a8c6ff;
+    }
+    @media (prefers-color-scheme: light) {
+      :root {
+        --bg: #ffffff;
+        --card: #ffffff;
+        --border: #dfe3ea;
+        --text: #1f2328;
+        --muted: #5e6a7a;
+        --accent: #1b66ff;
+        --accent-quiet: #e7efff;
+        --btn-bg: #f7f9fb;
+        --btn-border: #cbd5e1;
+        --link: #1b66ff;
+      }
+    }
+    body { margin: 0; background: var(--bg); color: var(--text); min-height: 100vh; font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Arial, sans-serif; }
+    #ah-float {
+      position: fixed; bottom: 16px; left: 16px; z-index: 999999;
+      background: var(--card); color: var(--text);
+      border: 1px solid var(--border); border-radius: 12px;
+      padding: 12px 14px; box-shadow: 0 6px 20px rgba(0,0,0,.12); max-width: 560px;
+    }
+    h1 { font-size: 16px; margin: 0 0 8px; }
+    .muted { color: var(--muted); font-size: 13px; }
+    .row { margin: 10px 0; }
+    .badge { display: inline-block; padding: 2px 8px; border-radius: 999px; background: var(--accent-quiet); font-size: 12px; }
+    .btn { display: inline-block; padding: 8px 12px; border-radius: 10px; border: 1px solid var(--btn-border); text-decoration: none; color: var(--text); margin: 6px 8px 0 0; background: var(--btn-bg); cursor: pointer; }
+    .btn:hover { filter: brightness(1.08); }
+    ul { margin: 6px 0 0 0; padding:0; list-style:none; display:flex; flex-wrap:wrap; gap:8px; }
+    .pill {
+      display:inline-flex; align-items:center; gap:8px;
+      padding:8px 10px; border-radius:999px; border:1px solid var(--btn-border);
+      background: var(--btn-bg); color: var(--link); text-decoration:none; cursor:pointer;
+      transition: transform .08s ease, background .12s ease;
+    }
+    .pill .arrow { opacity:.9; }
+    .pill:hover { background: var(--accent-quiet); transform: translateY(-1px); text-decoration:none; }
+    .list a { text-decoration: none; }
+    .foot { margin-top: 8px; font-size: 12px; color: var(--muted); }
+    .empty { color: var(--muted); }
+  </style>
+</head>
+<body>
+  <div id="ah-float">
+    <h1 data-i18n="suggestTitle">Site didn’t load — suggestions</h1>
+    <div class="muted" id="meta"></div>
+
+    <div class="row">
+      <span class="badge" data-i18n="quickActions">Quick actions</span><br/>
+      <div id="quick"></div>
+    </div>
+
+    <div class="row">
+      <span class="badge" data-i18n="altsHeading">Official alternate domains (from your settings)</span>
+      <ul id="alts" class="list"></ul>
+      <div id="alts_empty" class="empty" style="display:none" data-i18n="altsEmpty">No alternates...</div>
+    </div>
+
+    <div class="row">
+      <span class="badge" data-i18n="archiveHeading">Archive & checks</span><br/>
+      <a id="wayback" class="btn" target="_blank" rel="noreferrer" data-i18n="waybackBtn">Archive copy (Wayback)</a>
+      <a id="sameDomainSearch" class="btn" target="_blank" rel="noreferrer" data-i18n="siteSearchBtn">Site search</a>
+        <button id="openSettings" class="btn" type="button" data-i18n="settingsBtn">Settings</button>
+    </div>
+
+    <div class="foot"><span data-i18n="footerNote">Footer</span></div>
+  </div>
+  <script src="suggest.js"></script>
+</body>
+</html>
