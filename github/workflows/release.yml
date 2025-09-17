@@ -1,0 +1,20 @@
+name: Release ZIP
+on:
+  push:
+    tags: ['v*']
+jobs:
+  build-zip:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate manifest
+        run: |
+          test -f src/manifest.json
+          jq -r '.name,.version' src/manifest.json
+      - name: Build zip
+        run: |
+          cd src && zip -r ../unlock-sbs-${{ github.ref_name }}.zip .
+      - name: Create release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: unlock-sbs-${{ github.ref_name }}.zip
