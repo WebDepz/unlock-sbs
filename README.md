@@ -25,7 +25,7 @@
 
 ## Install
 
-- **Chrome Web Store**: *(link when available)*
+- **Chrome Web Store**: [Unlock.SBS on CWS](https://chromewebstore.google.com/detail/ldimjibdnbccpjgndkealkhojebhjdbh?utm_source=item-share-cb)
 - **Manual (dev mode)**:
   1. Clone repo → open `chrome://extensions`
   2. Enable **Developer mode** → **Load unpacked**
